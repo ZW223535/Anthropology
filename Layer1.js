@@ -1,88 +1,48 @@
-//temporaly code as place holder
+let myImage = []; //Empty Array to store variables
+let numImg = 8;
+
+let img2;
+let img3;
+let img4;
+let img5;
+let img7;
+let img8;
+let img9;
+let img10;
+
+function preload() {
+  img2 = loadImage("./assets/images/Rip2.jpg");
+  img3 = loadImage("./assets/images/Rip3.png");
+  img4 = loadImage("./assets/images/Rip4.jpg");
+  img5 = loadImage("./assets/images/Rip5.jpg");
+  img7 = loadImage("./assets/images/Rip7.jpg");
+  img8 = loadImage("./assets/images/Rip8.jpg");
+  img9 = loadImage("./assets/images/Rip9.jpeg");
+  img10 = loadImage("./assets/images/Rip10.jpg");
+  myImage = [img2, img3, img4, img5, img7, img8, img9, img10];
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(0);
+  background("#D8CDBA");
+  imageMode(CENTER);
 }
 
-var colorlist = [
-  "#ffadad",
-  "#ffd6a5",
-  "#ffb8d1",
-  "#e4b4c2",
-  "#fdffb6",
-  "#caffbf",
-  "#9bf6ff",
-  "#ddfdfe",
-  "#a0c4ff",
-  "#ddfdfe",
-  "#bdb2ff",
-  "#ffc6ff",
-  "#fffffc",
-];
-var positionX = [300, 600, 500];
-var positionY = [160, 400, 200];
-var sizeX = [1, 0.5, 0.8];
-var vYList = [1, 2, 3];
+function draw() {}
 
-function generateRandomFlower() {
-  sizeX.push(random(0.5, 1));
-  positionX.push(mouseX);
-  positionY.push(mouseY);
-  //colorlist.push(random(colorlist))
-  vYList.push(random(1, 4));
-}
-
+let randoImg;
 function mousePressed() {
-  generateRandomFlower();
+  randoImg = random(myImage);
+  image(randoImg, mouseX, mouseY, 360, 200);
 }
 
-function drawFlowers(clr1, clr2, clr3) {
+function mouseDragged() {
+  // let randoImg = random(myImage);
   push();
-  rotate(sqrt(frameCount + 1));
-  fill(clr1);
-  ellipse(0, 0, 50);
-  ellipseMode(CORNER);
-  fill(clr2);
-  //scale(1/log(frameCount)*10)
-  for (var i = 0; i < 8; i++) {
-    ellipse(20, -20, 40, 40);
-    //line(30,0,150,-10)
-    rotate(PI / 4);
-  }
-  fill(clr3);
-  for (var i = 0; i < 16; i++) {
-    ellipse(50, -20, 80, 40);
-    line(50, 0, 150, -10);
-    rotate(PI / 8);
-  }
 
+  image(randoImg, mouseX, mouseY, 360, 200);
   pop();
 }
-
-function draw() {
-  background(10, 20);
-  for (var i = 0; i < positionX.length; i++) {
-    let xx = positionX[i];
-    let yy = positionY[i];
-
-    push();
-    translate(xx, yy);
-
-    scale(sizeX[i]);
-    drawFlowers(
-      colorlist[i % 10],
-      colorlist[(i % 10) + 2],
-      colorlist[(i % 10) + 3]
-    );
-
-    pop();
-
-    positionY[i] += vYList[i];
-    if (yy > height) {
-      vYList[i] = -abs(vYList[i]);
-    } else if (yy <= 0) {
-      vYList[i] = abs(vYList[i]);
-    }
-  }
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
