@@ -12,7 +12,6 @@ function draw() {
   text(msg, width / 2, height / 2);
   textFont("Fuzzy Bubbles");
   push();
-
   pop();
 }
 
@@ -30,5 +29,5 @@ function mouseClicked() {
   );
 }
 function nextPage() {
-  window.open("layer 1.html");
+  window.open("Layer1.html");
 }
