@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -7,14 +8,20 @@ canvas {
   display: block;
 }
 
-.tutteimg{
-width: 100%;
+.tutteimg {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  top: 50vh;
 }
 
-.cerchi{
+.cerchi {
   position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -50px;
+  scale: 3;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
 }
