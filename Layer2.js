@@ -1,47 +1,18 @@
-// P_2_3_3_01
-//
-// Generative Gestaltung, ISBN: 978-3-87439-759-9
-// First Edition, Hermann Schmidt, Mainz, 2009
-// Hartmut Bohnacker, Benedikt Gross, Julia Laub, Claudius Lazzeroni
-// Copyright 2009 Hartmut Bohnacker, Benedikt Gross, Julia Laub, Claudius Lazzeroni
-//
-// http://www.generative-gestaltung.de
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-/**
- * draw tool. shows how to draw with dynamic elements. 
- * 
- * MOUSE
- * drag                : draw with text
- * 
- * KEYS
- * del, backspace      : clear screen
- * arrow up            : angle distortion +
- * arrow down          : angle distortion -
- * s                   : save png
-
- */
-
 var x = 0,
   y = 0;
 var stepSize = 5.0;
-var letters = "ECHO ";
+var letters = "ECHO";
 var fontSizeMin = 9;
 var angleDistortion = 0.5;
 var counter = 0;
 var can_write = 1;
+let nextPage;
 
 function setup() {
   // use full screen size
-  createCanvas(windowWidth, windowHeight);
+  container = createElement("div");
+  let canvas = createCanvas(windowWidth, windowHeight);
+  canvas.parent(container);
   background("#EBE2D1");
   smooth();
   cursor(CROSS);
@@ -51,6 +22,12 @@ function setup() {
 
   textAlign(LEFT);
   fill(0);
+
+  nextPage = createButton("Next Page");
+  nextPage.style(
+    "position: absolute; left:50%; top: 50%; transform: translate(-50%,-50%);text-align:center;font-family:'Georgia'; font-size:10px; border-radius: 10px"
+  );
+  nextPage.mousePressed(next);
 }
 
 function mousePressed() {
@@ -110,4 +87,9 @@ function mouseOver() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+  background("#EBE2D1");
+}
+
+function next() {
+  window.open("Layer3.html");
 }

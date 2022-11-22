@@ -1,6 +1,8 @@
 let myImage = []; //Empty Array to store variables
 let numImg = 8;
 
+let nextPage;
+
 let img2;
 let img3;
 let img4;
@@ -26,6 +28,12 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   background("#D8CDBA");
   imageMode(CENTER);
+
+  nextPage = createButton("Next Page");
+  nextPage.style(
+    "position: absolute; left:50%; top: 50%; transform: translate(-50%,-50%);text-align:center;font-family:'Georgia'; font-size:10px; border-radius: 10px"
+  );
+  nextPage.mousePressed(next);
 }
 
 function draw() {}
@@ -45,4 +53,9 @@ function mouseDragged() {
 }
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+  background("#D8CDBA");
+}
+
+function next() {
+  window.open("Layer2.html");
 }
