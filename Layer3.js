@@ -50,12 +50,15 @@ function draw() {
   //mySong4.play();
   //}
 
-  if (frameCount > 50) {
+  push();
+  frameRate(10);
+  if (frameCount > 10) {
     fill(random(0, 225));
     text("ECHO", random(1, width), random(1, height));
     textFont("Georgia");
     textSize(random(10, 50));
   }
+  pop();
 
   /*let randoImg;
   if (frameCount > 50) {
