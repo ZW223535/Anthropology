@@ -24,10 +24,10 @@ function preload() {
   img9 = loadImage("./assets/images/Rip9.jpeg");
   img10 = loadImage("./assets/images/Rip10.jpg");
   myImage = [img2, img3, img4, img5, img7, img8, img9, img10];
-  mySong1 = loadSound("./assets/music/8-bit.mp3");
+  //mySong1 = loadSound("./assets/music/8-bit.mp3");
   mySong2 = loadSound("./assets/music/drop 2.mp3");
-  mySong3 = loadSound("./assets/music/gLITCH.mp3");
-  mySong4 = loadSound("./assets/music/radio.mp3");
+  //mySong3 = loadSound("./assets/music/gLITCH.mp3");
+  //mySong4 = loadSound("./assets/music/radio.mp3");
 }
 
 function setup() {
@@ -37,18 +37,18 @@ function setup() {
 }
 
 function draw() {
-  if (mySong1.isPlaying() === false) {
-    mySong1.play();
-  }
+  //if (mySong1.isPlaying() === false) {
+  // mySong1.play();
+  // }
   if (mySong2.isPlaying() === false) {
     mySong2.play();
   }
-  if (mySong3.isPlaying() === false) {
-    mySong3.play();
-  }
-  if (mySong4.isPlaying() === false) {
-    mySong4.play();
-  }
+  //  if (mySong3.isPlaying() === false) {
+  //mySong3.play();
+  //}
+  //if (mySong4.isPlaying() === false) {
+  //mySong4.play();
+  //}
 
   if (frameCount > 50) {
     fill(random(0, 225));
