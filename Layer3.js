@@ -25,7 +25,7 @@ function preload() {
   img10 = loadImage("./assets/images/Rip10.jpg");
   myImage = [img2, img3, img4, img5, img7, img8, img9, img10];
   mySong2 = loadSound("./assets/music/Drop.mp3");
-  mySong3 = loadSound("./assets/music/gLITCH.mp3");
+  mySong3 = loadSound("./assets/music/Glitch.mp3");
   mySong4 = loadSound("./assets/music/radio.mp3");
 }
 
