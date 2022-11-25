@@ -6,7 +6,6 @@ var fontSizeMin = 9;
 var angleDistortion = 0.5;
 var counter = 0;
 var can_write = 1;
-let nextPage;
 
 function setup() {
   // use full screen size
@@ -22,12 +21,6 @@ function setup() {
 
   textAlign(LEFT);
   fill(0);
-
-  nextPage = createButton("Next Page");
-  nextPage.style(
-    "position: absolute; left:50%; top: 50%; transform: translate(-50%,-50%);text-align:center;font-family:'Georgia'; font-size:10px; border-radius: 10px"
-  );
-  nextPage.mousePressed(next);
 }
 
 function mousePressed() {

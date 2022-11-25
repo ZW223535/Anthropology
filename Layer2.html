@@ -14,5 +14,14 @@
 
    <body style="background-color: #ebe2d1"></body>
     <script src="Layer2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <button class="fadeButton" onclick="location.href='Layer3.html';">
+      Dive In
+    </button>
+    <script type="text/javascript">
+      $(window).on("load", function () {
+        $(".fadeButton").delay(2500).fadeIn();
+      });
+    </script>
   </body>
 </html>

@@ -1,10 +1,10 @@
 let myImage = []; //Empty Array to store variables
 let numImg = 8;
 
-let sentence = "ClickToGenerate";
+let sentence = "ClickToReflect";
 let sentenceArray = [];
-let r = 100;
-let theta = 0;
+let r = 70;
+let theta = 10.8;
 
 let nextPage;
 
@@ -43,7 +43,7 @@ function setup() {
 }
 
 function draw() {
-  if (frameCount > 180) {
+  if (frameCount > 100) {
     push();
 
     textAlign(CENTER);
@@ -64,7 +64,7 @@ function draw() {
     }
 
     pop();
-  } else if (frameCount > 181) {
+  } else if (frameCount > 101) {
     noLoop();
   }
 }
