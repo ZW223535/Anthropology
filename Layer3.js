@@ -46,20 +46,6 @@ function draw() {
     mySong4.play();
   }
 
-  frameRate(5);
-  if (frameCount > 10) {
-    fill(random(0, 225));
-    text("ECHO", random(1, width), random(1, height));
-    textFont("Georgia");
-    textSize(random(10, 50));
-  }
-
-  /*let randoImg;
-  if (frameCount > 50) {
-    randoImg = random(myImage);
-    image(randoImg, random(0, width), random(0, height), 360, 200);
-  }*/
-
   if (frameCount > 1000) {
     noLoop();
   }
