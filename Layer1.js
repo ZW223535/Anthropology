@@ -1,6 +1,11 @@
 let myImage = []; //Empty Array to store variables
 let numImg = 8;
 
+let sentence = "ClickToGenerate";
+let sentenceArray = [];
+let r = 100;
+let theta = 0;
+
 let nextPage;
 
 let img2;
@@ -29,14 +34,40 @@ function setup() {
   background("#D8CDBA");
   imageMode(CENTER);
 
-  nextPage = createButton("Next Page");
+  /* nextPage = createButton("Next Page");
   nextPage.style(
     "position: absolute; left:50%; top: 50%; transform: translate(-50%,-50%);text-align:center;font-family:'Georgia'; font-size:10px; border-radius: 10px"
   );
   nextPage.mousePressed(next);
+  fade = 0;*/
 }
 
-function draw() {}
+function draw() {
+  if (frameCount > 180) {
+    push();
+
+    textAlign(CENTER);
+    textSize(18);
+    fill(255);
+
+    sentenceArray = sentence.split(""); // splits a string into an array of chars
+
+    print(sentenceArray);
+
+    translate(width / 2, height / 2);
+    let x = r * cos(theta);
+    let y = r * sin(theta);
+
+    for (let i = 0; i < sentenceArray.length; i++) {
+      rotate(QUARTER_PI / 2);
+      text(sentenceArray[i], x, y);
+    }
+
+    pop();
+  } else if (frameCount > 181) {
+    noLoop();
+  }
+}
 
 let randoImg;
 function mousePressed() {
