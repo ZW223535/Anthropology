@@ -19,9 +19,12 @@ canvas {
 
 .cerchi {
   position: absolute;
-  scale: 3;
   -webkit-filter: drop-shadow(5px 5px 5px #222);
   filter: drop-shadow(5px 5px 5px #222);
   transition-duration: 1s;
   transition-timing-function: ease-in-out;
+}
+
+#c13{
+  
 }
