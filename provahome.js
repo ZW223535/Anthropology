@@ -4,3 +4,7 @@ document.querySelectorAll('.cerchi').forEach(element => {
         node.fromElement.classList.toggle('animate__pulse')
     })
 })
+
+document.getElementById("schermata").onclick = function() {
+    document.getElementById("schermata").style.display = "none";
+}
