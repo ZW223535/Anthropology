@@ -24,9 +24,8 @@ function preload() {
   img9 = loadImage("./assets/images/Rip9.jpeg");
   img10 = loadImage("./assets/images/Rip10.jpg");
   myImage = [img2, img3, img4, img5, img7, img8, img9, img10];
-  mySong1 = loadSound("./assets/music/8-bit.mp3");
-  mySong2 = loadSound("./assets/music/drop 2.mp3");
-  mySong3 = loadSound("./assets/music/gLITCH.mp3");
+  mySong2 = loadSound("./assets/music/Drop.mp3");
+  mySong3 = loadSound("./assets/music/Glitch.mp3");
   mySong4 = loadSound("./assets/music/radio.mp3");
 }
 
@@ -37,9 +36,6 @@ function setup() {
 }
 
 function draw() {
-  if (mySong1.isPlaying() === false) {
-    mySong1.play();
-  }
   if (mySong2.isPlaying() === false) {
     mySong2.play();
   }
@@ -50,7 +46,8 @@ function draw() {
     mySong4.play();
   }
 
-  if (frameCount > 50) {
+  frameRate(10);
+  if (frameCount > 10) {
     fill(random(0, 225));
     text("ECHO", random(1, width), random(1, height));
     textFont("Georgia");
@@ -62,6 +59,10 @@ function draw() {
     randoImg = random(myImage);
     image(randoImg, random(0, width), random(0, height), 360, 200);
   }*/
+
+  if (frameCount > 1000) {
+    noLoop();
+  }
 }
 
 let randoImg;
