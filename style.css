@@ -98,3 +98,17 @@ body::-webkit-scrollbar {
 body {
   -ms-overflow-style: none;
 }
+
+#tastino {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-46%, -50%);
+  z-index: 100;
+  padding: 0.5em;
+  border-radius: 3em;
+  font-size: xx-large;
+  background-color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
