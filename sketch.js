@@ -28,6 +28,7 @@ function mouseClicked() {
     "text-align:center;font-family:'Fuzzy Bubbles'; font-size:10px; border-radius: 10px"
   );
 }
+
 function nextPage() {
   window.open("Layer1.html");
 }
