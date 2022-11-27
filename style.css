@@ -39,3 +39,18 @@ canvas {
   transition-duration: 1s;
   transition-timing-function: ease-in-out;
 }
+
+.megatitolo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15em;
+  font-family: "FONT NAME";
+}
+
+@font-face {
+  font-family: "FONT NAME";
+  src: url("./assets/font/Ortica-Light.woff2") format("woff2"),
+    url("./assets/font/Ortica-Light.woff") format("woff");
+}
