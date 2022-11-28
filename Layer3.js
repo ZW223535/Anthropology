@@ -57,11 +57,19 @@ function draw() {
     mySong4.setVolume(0.3);
   }
 
-  if (frameCount > 50) {
+  if (frameCount > 80) {
     frameRate(4);
-    fill(random(0, 120));
+    fill(random(0, 255));
     text("ECHO", random(1, width), random(1, height));
     textFont("Ortica");
+    textSize(random(10, 100));
+  }
+
+  if (frameCount > 80) {
+    frameRate(4);
+    fill(random(0, 255));
+    text("ECHO", random(1, width), random(1, height));
+    textFont("Inconsolata-monospace");
     textSize(random(10, 100));
   }
 
