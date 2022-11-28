@@ -6,12 +6,11 @@ let sentenceArray = [];
 let r = 70;
 let theta = 10.8;
 
-let nextPage;
-
 let img2;
 let img3;
 let img4;
 let img5;
+let img6;
 let img7;
 let img8;
 let img9;
@@ -35,7 +34,10 @@ function setup() {
 
   push();
   tint(255, 150); // Display at half opacity
-  image(img6, 0, 0, width, height);
+  translate(width / 2, height / 2);
+  imageMode(CENTER);
+  let scale = Math.max(width / img6.width, height / img6.height);
+  image(img6, 0, 0, img6.width * scale, img6.height * scale);
   pop();
 }
 
@@ -73,7 +75,6 @@ function mousePressed() {
 
 function mouseDragged() {
   push();
-
   image(randoImg, mouseX, mouseY, 360, 200);
   pop();
 }
@@ -83,9 +84,12 @@ document.getElementById("schermata").onclick = function () {
 };
 
 function windowResized() {
+  push();
   resizeCanvas(windowWidth, windowHeight);
-}
-
-function next() {
-  window.open("Layer2.html");
+  translate(width / 2, height / 2);
+  let scale = Math.max(width / img6.width, height / img6.height);
+  tint(255, 150); // Display at half opacity
+  bg = image(img6, 0, 0, img6.width * scale, img6.height * scale);
+  background(bg);
+  pop();
 }

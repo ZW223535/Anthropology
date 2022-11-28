@@ -7,12 +7,26 @@ var angleDistortion = 0.5;
 var counter = 0;
 var can_write = 1;
 
+let img6;
+
+function preload() {
+  img6 = loadImage("./assets/images/ForestaSfondoTemporaneo.png");
+}
+
 function setup() {
   // use full screen size
   container = createElement("div");
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent(container);
-  background("#EBE2D1");
+
+  push();
+  tint(255, 150); // Display at half opacity
+  translate(width / 2, height / 2);
+  imageMode(CENTER);
+  let scale = Math.max(width / img6.width, height / img6.height);
+  image(img6, 0, 0, img6.width * scale, img6.height * scale);
+  pop();
+
   smooth();
   cursor(CROSS);
 
@@ -79,12 +93,14 @@ function mouseOver() {
 }
 
 function windowResized() {
+  push();
   resizeCanvas(windowWidth, windowHeight);
-  background("#EBE2D1");
-}
-
-function next() {
-  window.open("Layer3.html");
+  translate(width / 2, height / 2);
+  let scale = Math.max(width / img6.width, height / img6.height);
+  tint(255, 150); // Display at half opacity
+  bg = image(img6, 0, 0, img6.width * scale, img6.height * scale);
+  background(bg);
+  pop();
 }
 
 document.getElementById("schermata").onclick = function () {

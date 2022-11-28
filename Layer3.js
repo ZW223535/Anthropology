@@ -9,6 +9,7 @@ let img2;
 let img3;
 let img4;
 let img5;
+let img6;
 let img7;
 let img8;
 let img9;
@@ -19,6 +20,7 @@ function preload() {
   img3 = loadImage("./assets/images/Rip3.png");
   img4 = loadImage("./assets/images/Rip4.jpg");
   img5 = loadImage("./assets/images/Rip5.jpg");
+  img6 = loadImage("./assets/images/ForestaSfondoTemporaneo.png");
   img7 = loadImage("./assets/images/Rip7.jpg");
   img8 = loadImage("./assets/images/Rip8.jpg");
   img9 = loadImage("./assets/images/Rip9.jpeg");
@@ -31,8 +33,13 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background("#D8CDBA");
+  push();
+  tint(255, 150); // Display at half opacity
+  translate(width / 2, height / 2);
   imageMode(CENTER);
+  let scale = Math.max(width / img6.width, height / img6.height);
+  image(img6, 0, 0, img6.width * scale, img6.height * scale);
+  pop();
 }
 
 function draw() {
@@ -68,6 +75,7 @@ function draw() {
 let randoImg;
 function mousePressed() {
   randoImg = random(myImage);
+  imageMode(CENTER);
   image(randoImg, mouseX, mouseY, 360, 200);
 }
 
@@ -80,7 +88,14 @@ function mouseDragged() {
 }
 
 function windowResized() {
+  push();
   resizeCanvas(windowWidth, windowHeight);
+  translate(width / 2, height / 2);
+  let scale = Math.max(width / img6.width, height / img6.height);
+  tint(255, 150); // Display at half opacity
+  bg = image(img6, 0, 0, img6.width * scale, img6.height * scale);
+  background(bg);
+  pop();
 }
 
 document.getElementById("schermata").onclick = function () {
