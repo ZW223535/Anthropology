@@ -86,6 +86,7 @@ document.getElementById("schermata").onclick = function () {
 function windowResized() {
   push();
   resizeCanvas(windowWidth, windowHeight);
+  imageMode(CENTER);
   translate(width / 2, height / 2);
   let scale = Math.max(width / img6.width, height / img6.height);
   tint(255, 150); // Display at half opacity

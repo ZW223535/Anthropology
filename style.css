@@ -41,6 +41,23 @@ canvas {
   cursor: pointer;
 }
 
+.continue {
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 15px;
+  font-family: "inconsolata";
+  padding-top: 27px;
+  padding-bottom: 27px;
+  border-radius: 100%;
+  border-color: transparent;
+  background-color: #e8dfd2;
+  color: black;
+  cursor: pointer;
+}
+
 .cerchi {
   position: absolute;
   -webkit-filter: drop-shadow(5px 5px 5px #222);
@@ -134,7 +151,7 @@ body {
 .scritte {
   position: absolute;
   font-family: "Inconsolata", monospace;
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
   top: 50%;
   left: 50%;

@@ -4,6 +4,7 @@ let mySong1;
 let mySong2;
 let mySong3;
 let mySong4;
+let ortica;
 
 let img2;
 let img3;
@@ -53,12 +54,12 @@ function draw() {
     mySong4.play();
   }
 
-  frameRate(10);
-  if (frameCount > 10) {
-    fill(random(0, 225));
+  frameRate(5);
+  if (frameCount > 30) {
+    fill(random(0, 120));
     text("ECHO", random(1, width), random(1, height));
-    textFont("Georgia");
-    textSize(random(10, 50));
+    textFont("Ortica");
+    textSize(random(10, 70));
   }
 
   /*let randoImg;
@@ -91,6 +92,7 @@ function windowResized() {
   push();
   resizeCanvas(windowWidth, windowHeight);
   translate(width / 2, height / 2);
+  imageMode(CENTER);
   let scale = Math.max(width / img6.width, height / img6.height);
   tint(255, 150); // Display at half opacity
   bg = image(img6, 0, 0, img6.width * scale, img6.height * scale);
