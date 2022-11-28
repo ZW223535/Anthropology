@@ -10,7 +10,7 @@ var can_write = 1;
 let img6;
 
 function preload() {
-  img6 = loadImage("./assets/images/ForestaSfondoTemporaneo.png");
+  img6 = loadImage("./assets/images/ForestaSfondoTemporaneo.jpg");
 }
 
 function setup() {

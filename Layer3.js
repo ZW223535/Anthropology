@@ -17,15 +17,15 @@ let img9;
 let img10;
 
 function preload() {
-  img2 = loadImage("./assets/images/Rip2.jpg");
+  img1 = loadImage("./assets/images/Rip1.png");
   img3 = loadImage("./assets/images/Rip3.png");
-  img4 = loadImage("./assets/images/Rip4.jpg");
-  img5 = loadImage("./assets/images/Rip5.jpg");
-  img6 = loadImage("./assets/images/ForestaSfondoTemporaneo.png");
-  img7 = loadImage("./assets/images/Rip7.jpg");
-  img8 = loadImage("./assets/images/Rip8.jpg");
-  img9 = loadImage("./assets/images/Rip9.jpeg");
-  img10 = loadImage("./assets/images/Rip10.jpg");
+  img4 = loadImage("./assets/images/Rip4.png");
+  img5 = loadImage("./assets/images/Rip5.png");
+  img6 = loadImage("./assets/images/ForestaSfondoTemporaneo.jpg");
+  img7 = loadImage("./assets/images/Rip7.png");
+  img8 = loadImage("./assets/images/Rip8.png");
+  img9 = loadImage("./assets/images/Rip9.png");
+  img10 = loadImage("./assets/images/Rip10.png");
   myImage = [img2, img3, img4, img5, img7, img8, img9, img10];
   mySong2 = loadSound("./assets/music/Drop.mp3");
   mySong3 = loadSound("./assets/music/Glitch.mp3");
@@ -34,13 +34,12 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  push();
+
   tint(255, 150); // Display at half opacity
   translate(width / 2, height / 2);
   imageMode(CENTER);
   let scale = Math.max(width / img6.width, height / img6.height);
   image(img6, 0, 0, img6.width * scale, img6.height * scale);
-  pop();
 }
 
 function draw() {
@@ -88,19 +87,18 @@ let randoImg;
 function mousePressed() {
   randoImg = random(myImage);
   imageMode(CENTER);
-  image(randoImg, mouseX, mouseY, 360, 200);
+  image(randoImg, mouseX, mouseY, randoImg.width / 5, randoImg.height / 5);
 }
 
 function mouseDragged() {
   // let randoImg = random(myImage);
   push();
 
-  image(randoImg, mouseX, mouseY, 360, 200);
+  image(randoImg, mouseX, mouseY, randoImg.width / 5, randoImg.height / 5);
   pop();
 }
 
 function windowResized() {
-  push();
   resizeCanvas(windowWidth, windowHeight);
   translate(width / 2, height / 2);
   imageMode(CENTER);
@@ -108,7 +106,6 @@ function windowResized() {
   tint(255, 150); // Display at half opacity
   bg = image(img6, 0, 0, img6.width * scale, img6.height * scale);
   background(bg);
-  pop();
 }
 
 document.getElementById("schermata").onclick = function () {
