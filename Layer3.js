@@ -46,20 +46,23 @@ function setup() {
 function draw() {
   if (mySong2.isPlaying() === false) {
     mySong2.play();
+    mySong2.setVolume(0.3);
   }
   if (mySong3.isPlaying() === false) {
     mySong3.play();
+    mySong3.setVolume(0.08);
   }
   if (mySong4.isPlaying() === false) {
     mySong4.play();
+    mySong4.setVolume(0.3);
   }
 
-  frameRate(5);
-  if (frameCount > 30) {
+  if (frameCount > 50) {
+    frameRate(4);
     fill(random(0, 120));
     text("ECHO", random(1, width), random(1, height));
     textFont("Ortica");
-    textSize(random(10, 70));
+    textSize(random(10, 100));
   }
 
   /*let randoImg;

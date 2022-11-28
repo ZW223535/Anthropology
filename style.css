@@ -41,6 +41,11 @@ canvas {
   cursor: pointer;
 }
 
+.fadeButton:hover {
+  background-color: black;
+  color: #e8dfd2;
+}
+
 .continue {
   position: absolute;
   left: 50%;
@@ -56,6 +61,11 @@ canvas {
   background-color: #e8dfd2;
   color: black;
   cursor: pointer;
+}
+
+.continue:hover {
+  background-color: black;
+  color: #e8dfd2;
 }
 
 .cerchi {
