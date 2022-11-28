@@ -24,7 +24,6 @@ function setup() {
   container = createElement("div");
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent(container);
-
   push();
   tint(255, 150); // Display at half opacity
   translate(width / 2, height / 2);
@@ -124,6 +123,6 @@ function windowResized() {
   pop();
 }
 
-document.getElementById("schermata").onclick = function () {
-  document.getElementById("schermata").style.display = "none";
+document.getElementById("schermata2").onclick = function () {
+  document.getElementById("schermata2").style.display = "none";
 };

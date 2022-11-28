@@ -3,7 +3,6 @@ let numImg = 8;
 let mySound;
 let mySound2;
 
-let sentence = "ClickToReflect";
 let sentenceArray = [];
 let r = 70;
 let theta = 10.8;
@@ -67,8 +66,8 @@ function mouseDragged() {
   pop();
 }
 
-document.getElementById("schermata").onclick = function () {
-  document.getElementById("schermata").style.display = "none";
+document.getElementById("schermata2").onclick = function () {
+  document.getElementById("schermata2").style.display = "none";
 };
 
 function windowResized() {

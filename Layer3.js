@@ -114,6 +114,6 @@ function windowResized() {
   background(bg);
 }
 
-document.getElementById("schermata").onclick = function () {
-  document.getElementById("schermata").style.display = "none";
+document.getElementById("schermata2").onclick = function () {
+  document.getElementById("schermata2").style.display = "none";
 };
