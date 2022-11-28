@@ -8,9 +8,15 @@ var counter = 0;
 var can_write = 1;
 
 let img6;
+let mySound;
+let mySound2;
+let mySound3;
 
 function preload() {
-  img6 = loadImage("./assets/images/ForestaSfondoTemporaneo.jpg");
+  img6 = loadImage("./assets/images/ForestaSfondoTemporaneo.png");
+  mySound = loadSound("./assets/music/Forest.mp3");
+  mySound2 = loadSound("./assets/music/Drop.mp3");
+  mySound3 = loadSound("./assets/music/radio.mp3");
 }
 
 function setup() {
@@ -40,6 +46,7 @@ function setup() {
 function mousePressed() {
   can_write = 0;
 }
+
 function mouseReleased() {
   can_write = 1;
 }
@@ -70,6 +77,19 @@ function draw() {
       x = x + cos(angle) * stepSize;
       y = y + sin(angle) * stepSize;
     }
+  }
+
+  if (mySound.isPlaying() === false) {
+    mySound.play();
+    mySound.setVolume(0.3);
+  }
+  if (mySound2.isPlaying() === false) {
+    mySound2.play();
+    mySound2.setVolume(0.1);
+  }
+  if (mySound3.isPlaying() === false) {
+    mySound3.play();
+    mySound3.setVolume(0.1);
   }
 }
 

@@ -4,6 +4,7 @@ let mySong1;
 let mySong2;
 let mySong3;
 let mySong4;
+let mySound;
 let ortica;
 
 let img2;
@@ -21,12 +22,13 @@ function preload() {
   img3 = loadImage("./assets/images/Rip3.png");
   img4 = loadImage("./assets/images/Rip4.png");
   img5 = loadImage("./assets/images/Rip5.png");
-  img6 = loadImage("./assets/images/ForestaSfondoTemporaneo.jpg");
+  img6 = loadImage("./assets/images/ForestaSfondoTemporaneo.png");
   img7 = loadImage("./assets/images/Rip7.png");
   img8 = loadImage("./assets/images/Rip8.png");
   img9 = loadImage("./assets/images/Rip9.png");
   img10 = loadImage("./assets/images/Rip10.png");
   myImage = [img2, img3, img4, img5, img7, img8, img9, img10];
+  mySound = loadSound("./assets/music/Forest.mp3");
   mySong2 = loadSound("./assets/music/Drop.mp3");
   mySong3 = loadSound("./assets/music/Glitch.mp3");
   mySong4 = loadSound("./assets/music/radio.mp3");
@@ -43,6 +45,10 @@ function setup() {
 }
 
 function draw() {
+  if (mySound.isPlaying() === false) {
+    mySound.play();
+    mySound.setVolume(0.3);
+  }
   if (mySong2.isPlaying() === false) {
     mySong2.play();
     mySong2.setVolume(0.3);

@@ -1,5 +1,7 @@
 let myImage = []; //Empty Array to store variables
 let numImg = 8;
+let mySound;
+let mySound2;
 
 let sentence = "ClickToReflect";
 let sentenceArray = [];
@@ -21,12 +23,14 @@ function preload() {
   img3 = loadImage("./assets/images/Rip3.png");
   img4 = loadImage("./assets/images/Rip4.png");
   img5 = loadImage("./assets/images/Rip5.png");
-  img6 = loadImage("./assets/images/ForestaSfondoTemporaneo.jpg");
+  img6 = loadImage("./assets/images/ForestaSfondoTemporaneo.png");
   img7 = loadImage("./assets/images/Rip7.png");
   img8 = loadImage("./assets/images/Rip8.png");
   img9 = loadImage("./assets/images/Rip9.png");
   img10 = loadImage("./assets/images/Rip10.png");
   myImage = [img1, img3, img4, img5, img7, img8, img9, img10];
+  mySound = loadSound("./assets/music/Forest.mp3");
+  mySound2 = loadSound("./assets/music/Drop.mp3");
 }
 
 function setup() {
@@ -40,28 +44,14 @@ function setup() {
 }
 
 function draw() {
-  /*if (frameCount > 100) {
-    push();
-    textAlign(CENTER);
-    textSize(18);
-    fill(255);
-
-    sentenceArray = sentence.split(""); // splits a string into an array of chars
-
-    print(sentenceArray);
-
-    translate(width / 2, height / 2);
-    let x = r * cos(theta);
-    let y = r * sin(theta);
-
-    for (let i = 0; i < sentenceArray.length; i++) {
-      rotate(QUARTER_PI / 2);
-      text(sentenceArray[i], x, y);
-    }
-    pop();
-  } else if (frameCount > 101) {
-    noLoop();
-  }*/
+  if (mySound.isPlaying() === false) {
+    mySound.play();
+    mySound.setVolume(0.3);
+  }
+  if (mySound2.isPlaying() === false) {
+    mySound2.play();
+    mySound2.setVolume(0.1);
+  }
 }
 
 let randoImg;
