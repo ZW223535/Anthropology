@@ -86,3 +86,7 @@ function windowResized() {
 function next() {
   window.open("Layer3.html");
 }
+
+document.getElementById("schermata").onclick = function () {
+  document.getElementById("schermata").style.display = "none";
+};

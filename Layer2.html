@@ -4,15 +4,32 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Sketch</title>
+    <title>Second Layer</title>
 
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap"
+      rel="stylesheet"
+    />
 
     <script src="libraries/p5.min.js"></script>
     <script src="libraries/p5.sound.min.js"></script>
   </head>
 
-   <body style="background-color: #ebe2d1"></body>
+  <body>
+    <div id="schermata">
+      <p class="scritte">
+        The only thing that remains of her is the voice, the echo.<br />
+        <br />
+        Click to reflect.
+      </p>
+    </div>
     <script src="Layer2.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <button class="fadeButton" onclick="location.href='Layer3.html';">
@@ -20,7 +37,7 @@
     </button>
     <script type="text/javascript">
       $(window).on("load", function () {
-        $(".fadeButton").delay(3000).fadeIn();
+        $(".fadeButton").delay(4000).fadeIn();
       });
     </script>
   </body>

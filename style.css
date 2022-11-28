@@ -30,11 +30,14 @@ canvas {
   top: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 12px;
-  padding-top: 17px;
-  padding-bottom: 17px;
+  font-size: 15px;
+  font-family: "inconsolata";
+  padding-top: 23px;
+  padding-bottom: 23px;
   border-radius: 100%;
   border-color: transparent;
+  background-color: #e8dfd2;
+  color: black;
   cursor: pointer;
 }
 
@@ -53,7 +56,7 @@ canvas {
   top: 50%;
   transform: translate(-50%, -50%);
   font-size: 180px;
-  font-family: 'FONT NAME';
+  font-family: "FONT NAME";
   font-weight: 200;
 }
 
@@ -71,7 +74,7 @@ canvas {
   z-index: 0;
 }
 
-.tronco>img {
+.tronco > img {
   animation-name: giraCazzo;
   animation-duration: 30s;
   animation-iteration-count: infinite;
@@ -88,7 +91,6 @@ canvas {
     transform: rotate(360deg);
   }
 }
-
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
@@ -109,18 +111,18 @@ body {
   padding: 0.5em;
   border-radius: 3em;
   font-size: xx-large;
-  background-color: white;
+  background-color: #e8dfd2;
   color: black;
   text-decoration: none;
   font-weight: 700;
 }
 
-#tastino:hover{
+#tastino:hover {
   background-color: black;
   color: white;
 }
 
-#schermata{
+#schermata {
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -129,10 +131,10 @@ body {
   z-index: 101;
 }
 
-.scritte{
+.scritte {
   position: absolute;
-  font-family: 'Inconsolata', monospace;
-  font-size: 50px;
+  font-family: "Inconsolata", monospace;
+  font-size: 25px;
   text-align: center;
   top: 50%;
   left: 50%;

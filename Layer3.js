@@ -78,6 +78,11 @@ function mouseDragged() {
   image(randoImg, mouseX, mouseY, 360, 200);
   pop();
 }
+
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
+
+document.getElementById("schermata").onclick = function () {
+  document.getElementById("schermata").style.display = "none";
+};

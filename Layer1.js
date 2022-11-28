@@ -22,6 +22,7 @@ function preload() {
   img3 = loadImage("./assets/images/Rip3.png");
   img4 = loadImage("./assets/images/Rip4.jpg");
   img5 = loadImage("./assets/images/Rip5.jpg");
+  img6 = loadImage("./assets/images/ForestaSfondoTemporaneo.png");
   img7 = loadImage("./assets/images/Rip7.jpg");
   img8 = loadImage("./assets/images/Rip8.jpg");
   img9 = loadImage("./assets/images/Rip9.jpeg");
@@ -31,21 +32,16 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background("#D8CDBA");
-  imageMode(CENTER);
 
-  /* nextPage = createButton("Next Page");
-  nextPage.style(
-    "position: absolute; left:50%; top: 50%; transform: translate(-50%,-50%);text-align:center;font-family:'Georgia'; font-size:10px; border-radius: 10px"
-  );
-  nextPage.mousePressed(next);
-  fade = 0;*/
+  push();
+  tint(255, 150); // Display at half opacity
+  image(img6, 0, 0, width, height);
+  pop();
 }
 
 function draw() {
-  if (frameCount > 100) {
+  /*if (frameCount > 100) {
     push();
-
     textAlign(CENTER);
     textSize(18);
     fill(255);
@@ -62,29 +58,32 @@ function draw() {
       rotate(QUARTER_PI / 2);
       text(sentenceArray[i], x, y);
     }
-
     pop();
   } else if (frameCount > 101) {
     noLoop();
-  }
+  }*/
 }
 
 let randoImg;
 function mousePressed() {
+  imageMode(CENTER);
   randoImg = random(myImage);
   image(randoImg, mouseX, mouseY, 360, 200);
 }
 
 function mouseDragged() {
-  // let randoImg = random(myImage);
   push();
 
   image(randoImg, mouseX, mouseY, 360, 200);
   pop();
 }
+
+document.getElementById("schermata").onclick = function () {
+  document.getElementById("schermata").style.display = "none";
+};
+
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  background("#D8CDBA");
 }
 
 function next() {
