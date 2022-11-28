@@ -53,7 +53,7 @@ function mouseReleased() {
 function draw() {
   if (mouseOver) {
     var d = dist(x, y, mouseX, mouseY);
-    textFont("Georgia");
+    textFont("Ortica");
     textSize(fontSizeMin + d / 2);
     var newLetter = letters.charAt(counter);
     stepSize = textWidth(newLetter);
