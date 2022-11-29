@@ -150,35 +150,47 @@ body {
   color: white;
 }
 
-#schermata {
+/*#schermata {
   position: absolute;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.69);
   backdrop-filter: blur(15px);
   z-index: 101;
-}
+}*/
 
 #schermata2 {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(3px);
+  background-color:rgba(244, 243, 240, 1);
   z-index: 101;
 }
 
 .scritte {
   position: absolute;
-  font-family: "Inconsolata", thin;
-  font-size: 20px;
+  margin-top: 100px;
+  font-family: "FONT NAME", thin;
+  font-size: 30px;
   text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -75%);
-  color: white;
+  color: rgba(60, 55, 49, 1);
 }
 
 h1{
   font-weight: 200;
+}
+
+.caricamento{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-100%, -200%);
+  scale: 0.5;
+}
+
+#scritta2, #scritta3{
+  display: none;
 }
