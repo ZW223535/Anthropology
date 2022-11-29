@@ -7,12 +7,31 @@ var angleDistortion = 0.5;
 var counter = 0;
 var can_write = 1;
 
+let img6;
+let mySound;
+let mySound2;
+let mySound3;
+
+function preload() {
+  img6 = loadImage("./assets/images/ForestaSfondoTemporaneo.png");
+  mySound = loadSound("./assets/music/Forest.mp3");
+  mySound2 = loadSound("./assets/music/Drop.mp3");
+  mySound3 = loadSound("./assets/music/radio.mp3");
+}
+
 function setup() {
   // use full screen size
   container = createElement("div");
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent(container);
-  background("#EBE2D1");
+  push();
+  tint(255, 150); // Display at half opacity
+  translate(width / 2, height / 2);
+  imageMode(CENTER);
+  let scale = Math.max(width / img6.width, height / img6.height);
+  image(img6, 0, 0, img6.width * scale, img6.height * scale);
+  pop();
+
   smooth();
   cursor(CROSS);
 
@@ -26,6 +45,7 @@ function setup() {
 function mousePressed() {
   can_write = 0;
 }
+
 function mouseReleased() {
   can_write = 1;
 }
@@ -33,7 +53,7 @@ function mouseReleased() {
 function draw() {
   if (mouseOver) {
     var d = dist(x, y, mouseX, mouseY);
-    textFont("Georgia");
+    textFont("Ortica");
     textSize(fontSizeMin + d / 2);
     var newLetter = letters.charAt(counter);
     stepSize = textWidth(newLetter);
@@ -57,6 +77,19 @@ function draw() {
       y = y + sin(angle) * stepSize;
     }
   }
+
+  if (mySound.isPlaying() === false) {
+    mySound.play();
+    mySound.setVolume(0.3);
+  }
+  if (mySound2.isPlaying() === false) {
+    mySound2.play();
+    mySound2.setVolume(0.1);
+  }
+  if (mySound3.isPlaying() === false) {
+    mySound3.play();
+    mySound3.setVolume(0.1);
+  }
 }
 
 function mousePressed() {
@@ -79,10 +112,17 @@ function mouseOver() {
 }
 
 function windowResized() {
+  push();
   resizeCanvas(windowWidth, windowHeight);
-  background("#EBE2D1");
+  imageMode(CENTER);
+  translate(width / 2, height / 2);
+  let scale = Math.max(width / img6.width, height / img6.height);
+  tint(255, 150); // Display at half opacity
+  bg = image(img6, 0, 0, img6.width * scale, img6.height * scale);
+  background(bg);
+  pop();
 }
 
-function next() {
-  window.open("Layer3.html");
-}
+document.getElementById("schermata2").onclick = function () {
+  document.getElementById("schermata2").style.display = "none";
+};
