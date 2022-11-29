@@ -1,0 +1,198 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: initial;
+}
+
+canvas {
+  display: block;
+}
+
+.tutteimg {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  top: 50vh;
+  animation-name: giraCazzo;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+}
+
+.fadeButton {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 15px;
+  font-family: "inconsolata";
+  padding-top: 23px;
+  padding-bottom: 23px;
+  border-radius: 100%;
+  border-color: transparent;
+  background-color: #e8dfd2;
+  color: black;
+  cursor: pointer;
+}
+
+.fadeButton:hover {
+  background-color: black;
+  color: #e8dfd2;
+}
+
+.continue {
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 15px;
+  font-family: "inconsolata";
+  padding-top: 27px;
+  padding-bottom: 27px;
+  border-radius: 100%;
+  border-color: transparent;
+  background-color: #e8dfd2;
+  color: black;
+  cursor: pointer;
+}
+
+.continue:hover {
+  background-color: black;
+  color: #e8dfd2;
+}
+
+.cerchi {
+  position: absolute;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  scale: 0.4;
+}
+
+.megatitolo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 180px;
+<<<<<<< HEAD
+  font-family: 'FONT NAME';
+  font-weight: light;
+=======
+  font-family: "FONT NAME";
+  font-weight: 200;
+>>>>>>> 0e17cb1bf770c47816d9ead544da8a4076a5c551
+}
+
+@font-face {
+  font-family: "FONT NAME";
+  src: url("./assets/font/Ortica-Light.woff2") format("woff2"),
+    url("./assets/font/Ortica-Light.woff") format("woff");
+}
+
+.tronco {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-46%, -50%);
+  z-index: 0;
+}
+
+<<<<<<< HEAD
+
+.tronco>img {
+  /*animation-name: giraCazzo; */
+=======
+.tronco > img {
+  animation-name: giraCazzo;
+>>>>>>> 0e17cb1bf770c47816d9ead544da8a4076a5c551
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  scale: 0.90;
+}
+
+@keyframes giraCazzo {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+body {
+  -ms-overflow-style: none;
+}
+
+#tastino {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-46%, -50%);
+  z-index: 100;
+  padding: 0.2em;
+  border-radius: 3em;
+  font-size: xx-large;
+  background-color: #e8dfd2;
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+#tastino:hover {
+  background-color: black;
+  color: white;
+}
+
+#schermata {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.69);
+  backdrop-filter: blur(15px);
+  z-index: 101;
+}
+
+#schermata2 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(3px);
+  z-index: 101;
+}
+
+.scritte {
+  position: absolute;
+  font-family: "Inconsolata", thin;
+  font-size: 20px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+<<<<<<< HEAD
+}
+
+h1{
+  font-weight: 200;
+}
+=======
+  color: white;
+}
+>>>>>>> 0e17cb1bf770c47816d9ead544da8a4076a5c551
