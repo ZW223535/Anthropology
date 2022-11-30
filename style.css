@@ -85,7 +85,7 @@ canvas {
   top: 50%;
   transform: translate(-50%, -50%);
   font-size: 60px;
-  font-family: 'FONT NAME';
+  font-family: "FONT NAME";
   font-weight: light;
 }
 
@@ -103,13 +103,12 @@ canvas {
   z-index: 0;
 }
 
-
-.tronco>img {
+.tronco > img {
   /*animation-name: giraCazzo; */
   animation-duration: 30s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  scale: 0.90;
+  scale: 0.9;
 }
 
 @keyframes giraCazzo {
@@ -165,15 +164,15 @@ body {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-color:rgba(244, 243, 240, 1);
+  background-color: rgba(244, 243, 240, 1);
   z-index: 101;
 }
 
 .scritte {
   position: absolute;
-  margin-top: 100px;
+  margin-top: 5px;
   font-family: "FONT NAME", thin;
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   top: 50%;
   left: 50%;
@@ -181,11 +180,11 @@ body {
   color: rgba(60, 55, 49, 1);
 }
 
-h1{
+h1 {
   font-weight: 200;
 }
 
-.caricamento{
+.caricamento {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -193,14 +192,15 @@ h1{
   scale: 0.5;
 }
 
-#scritta2, #scritta3{
+#scritta2,
+#scritta3 {
   display: none;
 }
 
-#eco1{
+#eco1 {
   transform: translate(-100%, -40%);
 }
 
-#eco2{
+#eco2 {
   transform: translate(100%, 40%);
 }
