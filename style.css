@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-y: initial;
+  background-color: rgba(244, 243, 240, 1);
 }
 
 canvas {
@@ -74,7 +75,8 @@ canvas {
   filter: drop-shadow(5px 5px 5px #222);
   transition-duration: 1s;
   transition-timing-function: ease-in-out;
-  scale: 0.4;
+  scale: 1;
+  opacity: 50%;
 }
 
 .megatitolo {
@@ -82,7 +84,7 @@ canvas {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 180px;
+  font-size: 60px;
   font-family: 'FONT NAME';
   font-weight: light;
 }
@@ -193,4 +195,12 @@ h1{
 
 #scritta2, #scritta3{
   display: none;
+}
+
+#eco1{
+  transform: translate(-100%, -40%);
+}
+
+#eco2{
+  transform: translate(100%, 40%);
 }
