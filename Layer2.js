@@ -24,13 +24,7 @@ function setup() {
   container = createElement("div");
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent(container);
-  push();
-  tint(255, 150); // Display at half opacity
-  translate(width / 2, height / 2);
-  imageMode(CENTER);
-  let scale = Math.max(width / img6.width, height / img6.height);
-  image(img6, 0, 0, img6.width * scale, img6.height * scale);
-  pop();
+  background("#F4F3F0");
 
   smooth();
   cursor(CROSS);
@@ -112,15 +106,8 @@ function mouseOver() {
 }
 
 function windowResized() {
-  push();
   resizeCanvas(windowWidth, windowHeight);
-  imageMode(CENTER);
-  translate(width / 2, height / 2);
-  let scale = Math.max(width / img6.width, height / img6.height);
-  tint(255, 150); // Display at half opacity
-  bg = image(img6, 0, 0, img6.width * scale, img6.height * scale);
-  background(bg);
-  pop();
+  background("#F4F3F0");
 }
 
 document.getElementById("schermata2").onclick = function () {

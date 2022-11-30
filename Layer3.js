@@ -36,12 +36,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-
-  tint(255, 150); // Display at half opacity
-  translate(width / 2, height / 2);
-  imageMode(CENTER);
-  let scale = Math.max(width / img6.width, height / img6.height);
-  image(img6, 0, 0, img6.width * scale, img6.height * scale);
+  background("#F4F3F0");
 }
 
 function draw() {
@@ -64,7 +59,7 @@ function draw() {
 
   if (frameCount > 80) {
     frameRate(4);
-    fill(random(0, 255));
+    fill(random(0, 150));
     text("ECHO", random(1, width), random(1, height));
     textFont("Ortica");
     textSize(random(10, 100));
@@ -77,12 +72,6 @@ function draw() {
     textFont("Inconsolata-monospace");
     textSize(random(10, 100));
   }
-
-  /*let randoImg;
-  if (frameCount > 50) {
-    randoImg = random(myImage);
-    image(randoImg, random(0, width), random(0, height), 360, 200);
-  }*/
 
   if (frameCount > 1000) {
     noLoop();
@@ -106,12 +95,7 @@ function mouseDragged() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  translate(width / 2, height / 2);
-  imageMode(CENTER);
-  let scale = Math.max(width / img6.width, height / img6.height);
-  tint(255, 150); // Display at half opacity
-  bg = image(img6, 0, 0, img6.width * scale, img6.height * scale);
-  background(bg);
+  background("#F4F3F0");
 }
 
 document.getElementById("schermata2").onclick = function () {
