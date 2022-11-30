@@ -3,7 +3,6 @@ body {
   margin: 0;
   padding: 0;
   overflow-y: initial;
-  background-color: rgba(244, 243, 240, 1);
 }
 
 canvas {
@@ -75,8 +74,7 @@ canvas {
   filter: drop-shadow(5px 5px 5px #222);
   transition-duration: 1s;
   transition-timing-function: ease-in-out;
-  scale: 1;
-  opacity: 50%;
+  scale: 0.4;
 }
 
 .megatitolo {
@@ -84,9 +82,14 @@ canvas {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 60px;
+  font-size: 180px;
+<<<<<<< HEAD
   font-family: 'FONT NAME';
   font-weight: light;
+=======
+  font-family: "FONT NAME";
+  font-weight: 200;
+>>>>>>> 0e17cb1bf770c47816d9ead544da8a4076a5c551
 }
 
 @font-face {
@@ -103,9 +106,14 @@ canvas {
   z-index: 0;
 }
 
+<<<<<<< HEAD
 
 .tronco>img {
   /*animation-name: giraCazzo; */
+=======
+.tronco > img {
+  animation-name: giraCazzo;
+>>>>>>> 0e17cb1bf770c47816d9ead544da8a4076a5c551
   animation-duration: 30s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -152,55 +160,39 @@ body {
   color: white;
 }
 
-/*#schermata {
+#schermata {
   position: absolute;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.69);
   backdrop-filter: blur(15px);
   z-index: 101;
-}*/
+}
 
 #schermata2 {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-color:rgba(244, 243, 240, 1);
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(3px);
   z-index: 101;
 }
 
 .scritte {
   position: absolute;
-  margin-top: 100px;
-  font-family: "FONT NAME", thin;
-  font-size: 30px;
+  font-family: "Inconsolata", thin;
+  font-size: 20px;
   text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -75%);
-  color: rgba(60, 55, 49, 1);
+<<<<<<< HEAD
 }
 
 h1{
   font-weight: 200;
 }
-
-.caricamento{
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-100%, -200%);
-  scale: 0.5;
+=======
+  color: white;
 }
-
-#scritta2, #scritta3{
-  display: none;
-}
-
-#eco1{
-  transform: translate(-100%, -40%);
-}
-
-#eco2{
-  transform: translate(100%, 40%);
-}
+>>>>>>> 0e17cb1bf770c47816d9ead544da8a4076a5c551
