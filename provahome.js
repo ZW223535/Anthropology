@@ -21,26 +21,26 @@ document.querySelectorAll(".cerchi").forEach((element) => {
 });
 
 
-var contatore = 0;
+var contatore=1;
 
 document.getElementById("schermata2").onclick = function(){
-  contatore = contatore + 1;
-console.log(contatore)}
+  contatore=contatore+1;
+console.log(contatore)
 
-if (contatore = 0) {
+if (contatore==1) {
   document.getElementById("scritta1").style.display="block";
 }
 
-if (contatore = 1) {
+if (contatore==2) {
   document.getElementById("scritta1").style.display="none";
   document.getElementById("scritta2").style.display = "block";
 }
 
-if (contatore = 2) {
+if (contatore==3) {
   document.getElementById("scritta2").style.display ="none";
   document.getElementById("scritta3").style.display = "block";
 }
 
-if (contatore = 3) {
+if (contatore==4) {
   document.getElementById("schermata2").style.display ="none";
-}
+}}
