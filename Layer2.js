@@ -72,6 +72,12 @@ function draw() {
     }
   }
 
+  if (frameCount < 110) {
+    mySound.stop();
+    mySound2.stop();
+    mySound3.stop();
+  }
+
   if (mySound.isPlaying() === false) {
     mySound.play();
     mySound.setVolume(0.3);

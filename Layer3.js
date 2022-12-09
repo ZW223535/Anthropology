@@ -40,6 +40,13 @@ function setup() {
 }
 
 function draw() {
+  if (frameCount < 70) {
+    mySound.stop();
+    mySong2.stop();
+    mySong3.stop();
+    mySong4.stop();
+  }
+
   if (mySound.isPlaying() === false) {
     mySound.play();
     mySound.setVolume(0.3);
