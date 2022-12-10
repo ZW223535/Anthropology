@@ -155,15 +155,6 @@ body {
   color: white;
 }
 
-/*#schermata {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.69);
-  backdrop-filter: blur(15px);
-  z-index: 101;
-}*/
-
 #schermata2 {
   position: absolute;
   width: 100vw;
@@ -184,15 +175,26 @@ body {
   color: rgba(60, 55, 49, 1);
 }
 
+.scritte2 {
+  position: absolute;
+  margin-top: 5px;
+  font-family: "FONT NAME", thin;
+  font-size: 25px;
+  text-align: center;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(60, 55, 49, 1);
+}
+
 h1 {
   font-weight: 200;
 }
 
 .caricamento {
   position: absolute;
-  position: absolute;
-  left: 43%;
-  bottom: 15%;
+  left: 42%;
+  top: 15%;
   transform: translate(-50%, -50%);
   scale: 0.5;
 }
