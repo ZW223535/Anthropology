@@ -24,7 +24,7 @@ function setup() {
   container = createElement("div");
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent(container);
-  background("#F4F3F0");
+  background("#F2F2F2");
 
   smooth();
   cursor(CROSS);
@@ -113,7 +113,7 @@ function mouseOver() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  background("#F4F3F0");
+  background("#F2F2F2");
 }
 
 document.getElementById("schermata2").onclick = function () {

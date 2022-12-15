@@ -36,7 +36,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background("#F4F3F0");
+  background("#F2F2F2");
 }
 
 function draw() {
@@ -102,7 +102,7 @@ function mouseDragged() {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
-  background("#F4F3F0");
+  background("#F2F2F2");
 }
 
 document.getElementById("schermata2").onclick = function () {
