@@ -49,8 +49,37 @@ function setup() {
     "Just like Echo, in an echo chamber we experience both <br> a <b> sense of isolation </b> because we keep hearing the same voices, <br> and just like Narcissus, at the same time we cannot hear <br> any other voice but our own."
   );
   myText4.style(
-    "position: absolute; top: 2200px; padding-top: 0; padding-bottom: 200px;left:50%; transform: translate(-50%, 0%); text-align:center; font-size: 18px; font-family:'Ortica-Light';"
+    "position: absolute; top: 2100px; padding-top: 300px; padding-bottom: 270px;left:50%; transform: translate(-50%, 0%); text-align:center; font-size: 18px; font-family:'Ortica-Light';"
   );
+
+  image3 = createImg("./assets/images/Occhiali.png");
+  image3.position(0, 2900);
+  image3.size(width, height);
+
+  myText5 = createElement("h1", "<b>OUR REFLECTIONS</br>");
+  myText5.style(
+    "position: absolute; top: 3500px; padding-top: 300px; padding-bottom: 270px;left:50%; transform: translate(-50%, 0%); text-align:center; font-size: 30px; font-family:'Ortica-Light';"
+  );
+
+  myText6 = createElement(
+    "p",
+    "The scenario is much more difficult to manage than we think. It may be too late <br> to change a mechanism whose pattern we barely understand. <br> <br> <br> Ultimately, we do not intend to offer simplistic solutions, but hope <br> for a positive awareness that will lead to <b>independent attempts to change <br>our perspective and develop our critical sense. </b><br>"
+  );
+  myText6.style(
+    "position: absolute; top: 3600px; padding-top: 300px; padding-bottom: 270px;left:50%; transform: translate(-50%, 0%); text-align:center; font-size: 18px; font-family:'Ortica-Light';"
+  );
+
+  myText7 = createElement(
+    "p",
+    "Politecnico di Milano - Anthropology of Communication <br> A.A. 2022/2023 <br> Professor Derrick de Kerckhove <br> Team Project: <br> Denise Beretta, Noemi Capparelli, Matilde Cirafici, Michela Chignoli <br> Francesca Curati, Francesca Mattiacci, Claudia Pezzini, Zeya Wu     "
+  );
+  myText7.style(
+    "position: absolute; top: 5000px; left:100px; text-align:left; padding-bottom: 100px; font-size: 12px; font-family:'Ortica-Light';"
+  );
+
+  logoPoli = createImg("./assets/images/Poli.png");
+  logoPoli.size(319 / 1.5, 94 / 1.5);
+  logoPoli.style("position: absolute; top: 5000px; right:100px;");
 }
 
 function draw() {}
@@ -61,4 +90,6 @@ function windowResized() {
   image(image1, width / 2, 290, image1.width / 1.5, image1.height / 1.5);
   image2.position(0, 1400);
   image2.size(width, height);
+  image3.position(0, 2900);
+  image3.size(width, height);
 }
