@@ -13,7 +13,6 @@ let mySound2;
 let mySound3;
 
 function preload() {
-  img6 = loadImage("./assets/images/ForestaSfondoTemporaneo.png");
   mySound = loadSound("./assets/music/Forest.mp3");
   mySound2 = loadSound("./assets/music/Drop.mp3");
   mySound3 = loadSound("./assets/music/radio.mp3");

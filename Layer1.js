@@ -22,7 +22,6 @@ function preload() {
   img3 = loadImage("./assets/images/Rip3.png");
   img4 = loadImage("./assets/images/Rip4.png");
   img5 = loadImage("./assets/images/Rip5.png");
-  img6 = loadImage("./assets/images/ForestaSfondoTemporaneo.png");
   img7 = loadImage("./assets/images/Rip7.png");
   img8 = loadImage("./assets/images/Rip8.png");
   img9 = loadImage("./assets/images/Rip9.png");

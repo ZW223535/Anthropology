@@ -1,8 +1,20 @@
 let image1;
 let image2;
+let image3;
+let image4;
+let image5;
+let image6;
+let image7;
+let image8;
+let logoPoli;
 let myFont;
 let myText1;
 let myText2;
+let myText3;
+let myText4;
+let myText5;
+let myText6;
+let myText7;
 
 function preload() {
   image1 = loadImage("./assets/images/load.png");
@@ -69,20 +81,67 @@ function setup() {
     "position: absolute; top: 3600px; padding-top: 300px; padding-bottom: 270px;left:50%; transform: translate(-50%, 0%); text-align:center; font-size: 18px; font-family:'Ortica-Light';"
   );
 
+  image4 = createImg("./assets/images/CaseStudies.png");
+  image4.style("position:absolute; top: 4250px; left: 100px; cursor:pointer");
+  image4.size(490 / 1.2, 628 / 1.2);
+  image4.mousePressed(goCaseStudy);
+
+  image5 = createImg("./assets/images/SocialDilemma.png");
+  image5.style("position:absolute; top: 4480px; left: 450px; cursor:pointer");
+  image5.size(450 / 1.2, 666 / 1.2);
+  image5.mousePressed(goSocialDilemma);
+
+  image6 = createImg("./assets/images/NewsEchoChamber2.jpg");
+  image6.style("position:absolute; top: 4350px; right: 100px; cursor:pointer");
+  image6.size(819 / 1.2, 523 / 1.2);
+  image6.mousePressed(goNewsEcho);
+
+  image7 = createImg("./assets/images/EchoChamber.png");
+  image7.style("position:absolute; top: 5020px; left: 150px; cursor:pointer");
+  image7.size(790 / 1.2, 445 / 1.2);
+  image7.mousePressed(goEchoChamber);
+
+  image8 = createImg("./assets/images/ShatteredGlass.png");
+  image8.style("position:absolute; top: 4750px; right: 150px; cursor:pointer");
+  image8.size(500 / 1.2, 734 / 1.2);
+  image8.mousePressed(goShattered);
+
   myText7 = createElement(
     "p",
-    "Politecnico di Milano - Anthropology of Communication <br> A.A. 2022/2023 <br> Professor Derrick de Kerckhove <br> Team Project: <br> Denise Beretta, Noemi Capparelli, Matilde Cirafici, Michela Chignoli <br> Francesca Curati, Francesca Mattiacci, Claudia Pezzini, Zeya Wu     "
+    "<b> Politecnico di Milano - Anthropology of Communication </b><br> A.A. 2022/2023 - Professor <b> Derrick de Kerckhove </br> <br> <b>Team Project:</b> <br> Denise Beretta, Noemi Capparelli, Matilde Cirafici, Michela Chignoli <br> Francesca Curati, Francesca Mattiacci, Claudia Pezzini, Zeya Wu     "
   );
   myText7.style(
-    "position: absolute; top: 5000px; left:100px; text-align:left; padding-bottom: 100px; font-size: 12px; font-family:'Ortica-Light';"
+    "position: absolute; top: 5520px; left:100px; text-align:left; padding-bottom: 50px; font-size: 12px; font-family:'Ortica-Light';"
   );
 
   logoPoli = createImg("./assets/images/Poli.png");
   logoPoli.size(319 / 1.5, 94 / 1.5);
-  logoPoli.style("position: absolute; top: 5000px; right:100px;");
+  logoPoli.style("position: absolute; top: 5560px; right:100px;");
 }
 
-function draw() {}
+function goCaseStudy() {
+  window.open(
+    "https://datasociety.net/wp-content/uploads/2017/05/DataAndSociety_CaseStudies-MediaManipulationAndDisinformationOnline.pdf"
+  );
+}
+
+function goSocialDilemma() {
+  window.open("https://www.youtube.com/watch?v=uaaC57tcci0");
+}
+
+function goNewsEcho() {
+  window.open(
+    "https://theconversation.com/how-to-check-if-youre-in-a-news-echo-chamber-and-what-to-do-about-it-69999"
+  );
+}
+
+function goEchoChamber() {
+  window.open("https://www.techopedia.com/definition/23423/echo-chamber");
+}
+
+function goShattered() {
+  window.open("https://www.youtube.com/watch?v=LTeK1v6Qx_I");
+}
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
