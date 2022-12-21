@@ -168,3 +168,14 @@ function windowResized() {
   image3.position(0, 2900);
   image3.size(width, height);
 }
+
+var contatore = 1;
+
+document.getElementById("schermata2").onclick = function () {
+  contatore = contatore + 1;
+  console.log(contatore);
+
+  if (contatore == 3) {
+    document.getElementById("schermata2").style.display = "none";
+  }
+};
