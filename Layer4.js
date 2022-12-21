@@ -6,6 +6,7 @@ let image5;
 let image6;
 let image7;
 let image8;
+let image9;
 let logoPoli;
 let myFont;
 let myText1;
@@ -43,6 +44,11 @@ function setup() {
   myText2.style(
     "position: absolute; left:50%; top: 800px; transform: translate(-50%, 0%); text-align:center; font-size: 18px; font-family:'Ortica-Light';"
   );
+
+  image8 = createImg("./assets/images/Sfondo.png");
+  image8.style("position:absolute; top: 640px; right:0px; cursor:pointer");
+  image8.size(970 / 2.4, 978 / 1.3);
+  image8.mousePressed(goShattered);
 
   image2 = createImg("./assets/images/Sfondo2.png");
   image2.position(0, 1400);
@@ -102,8 +108,8 @@ function setup() {
   image7.mousePressed(goEchoChamber);
 
   image8 = createImg("./assets/images/ShatteredGlass.png");
-  image8.style("position:absolute; top: 4750px; right: 150px; cursor:pointer");
-  image8.size(500 / 1.2, 734 / 1.2);
+  image8.style("position:absolute; top: 4800px; right: 150px; cursor:pointer");
+  image8.size(500 / 1.4, 734 / 1.4);
   image8.mousePressed(goShattered);
 
   myText7 = createElement(
