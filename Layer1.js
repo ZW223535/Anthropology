@@ -37,7 +37,7 @@ function setup() {
 }
 
 function draw() {
-  if (frameCount < 150) {
+  if (frameCount < 20) {
     mySound.stop();
     mySound2.stop();
   }
