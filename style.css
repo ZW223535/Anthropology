@@ -234,7 +234,6 @@ h1 {
 }
 
 video {
-  z-index: 102;
   position: fixed;
   right: 0;
   bottom: 0;
