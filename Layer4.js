@@ -7,6 +7,7 @@ let image6;
 let image7;
 let image8;
 let image9;
+let image10;
 let logoPoli;
 let myFont;
 let myText1;
@@ -45,10 +46,10 @@ function setup() {
     "position: absolute; left:50%; top: 800px; transform: translate(-50%, 0%); text-align:center; font-size: 18px; font-family:'Ortica-Light';"
   );
 
-  image8 = createImg("./assets/images/Sfondo.png");
-  image8.style("position:absolute; top: 640px; right:0px; cursor:pointer");
-  image8.size(970 / 2.4, 978 / 1.3);
-  image8.mousePressed(goShattered);
+  image9 = createImg("./assets/images/Sfondo.png");
+  image9.style("position:absolute; top: 640px; right:0px; cursor:pointer");
+  image9.size(970 / 2.4, 978 / 1.3);
+  image9.mousePressed(goShattered);
 
   image2 = createImg("./assets/images/Sfondo2.png");
   image2.position(0, 1400);
@@ -67,7 +68,7 @@ function setup() {
     "Just like Echo, in an echo chamber we experience both <br> a <b> sense of isolation </b> because we keep hearing the same voices, <br> and just like Narcissus, at the same time we cannot hear <br> any other voice but our own."
   );
   myText4.style(
-    "position: absolute; top: 2100px; padding-top: 300px; padding-bottom: 270px;left:50%; transform: translate(-50%, 0%); text-align:center; font-size: 18px; font-family:'Ortica-Light';"
+    "position: absolute; top: 2100px; padding-top: 350px; padding-bottom: 270px;left:50%; transform: translate(-50%, 0%); text-align:center; font-size: 18px; font-family:'Ortica-Light';"
   );
 
   image3 = createImg("./assets/images/Occhiali.png");
@@ -76,7 +77,7 @@ function setup() {
 
   myText5 = createElement("h1", "<b>OUR REFLECTIONS</br>");
   myText5.style(
-    "position: absolute; top: 3500px; padding-top: 300px; padding-bottom: 270px;left:50%; transform: translate(-50%, 0%); text-align:center; font-size: 30px; font-family:'Ortica-Light';"
+    "position: absolute; top: 3500px; padding-top: 300px; padding-bottom: 270px;left:50%; transform: translate(-50%, 0%); text-align:center; font-size: 25px; font-family:'Ortica-Light';"
   );
 
   myText6 = createElement(
@@ -84,7 +85,7 @@ function setup() {
     "The scenario is much more difficult to manage than we think. It may be too late <br> to change a mechanism whose pattern we barely understand. <br> <br> <br> Ultimately, we do not intend to offer simplistic solutions, but hope <br> for a positive awareness that will lead to <b>independent attempts to change <br>our perspective and develop our critical sense. </b><br>"
   );
   myText6.style(
-    "position: absolute; top: 3600px; padding-top: 300px; padding-bottom: 270px;left:50%; transform: translate(-50%, 0%); text-align:center; font-size: 18px; font-family:'Ortica-Light';"
+    "position: absolute; top: 3600px; padding-top: 300px; padding-bottom: 300px;left:50%; transform: translate(-50%, 0%); text-align:center; font-size: 18px; font-family:'Ortica-Light';"
   );
 
   image4 = createImg("./assets/images/CaseStudies.png");
@@ -93,12 +94,12 @@ function setup() {
   image4.mousePressed(goCaseStudy);
 
   image5 = createImg("./assets/images/SocialDilemma.png");
-  image5.style("position:absolute; top: 4480px; left: 450px; cursor:pointer");
+  image5.style("position:absolute; top: 4480px; left: 400px; cursor:pointer");
   image5.size(450 / 1.2, 666 / 1.2);
   image5.mousePressed(goSocialDilemma);
 
   image6 = createImg("./assets/images/NewsEchoChamber2.jpg");
-  image6.style("position:absolute; top: 4350px; right: 100px; cursor:pointer");
+  image6.style("position:absolute; top: 4300px; right: 100px; cursor:pointer");
   image6.size(819 / 1.2, 523 / 1.2);
   image6.mousePressed(goNewsEcho);
 
@@ -107,9 +108,14 @@ function setup() {
   image7.size(790 / 1.2, 445 / 1.2);
   image7.mousePressed(goEchoChamber);
 
+  image10 = createImg("./assets/images/Ovid.png");
+  image10.style("position:absolute; top: 4700px; right: 350px; cursor:pointer");
+  image10.size(461 / 1.3, 714 / 1.3);
+  image10.mousePressed(goOvid);
+
   image8 = createImg("./assets/images/ShatteredGlass.png");
-  image8.style("position:absolute; top: 4800px; right: 150px; cursor:pointer");
-  image8.size(500 / 1.4, 734 / 1.4);
+  image8.style("position:absolute; top: 5000px; right: 100px; cursor:pointer");
+  image8.size(340 / 1.3, 500 / 1.3);
   image8.mousePressed(goShattered);
 
   myText7 = createElement(
@@ -143,6 +149,10 @@ function goNewsEcho() {
 
 function goEchoChamber() {
   window.open("https://www.techopedia.com/definition/23423/echo-chamber");
+}
+
+function goOvid() {
+  window.open("http://anthony.sogang.ac.kr/Classics/OvidEchoNarcissus.htm");
 }
 
 function goShattered() {
