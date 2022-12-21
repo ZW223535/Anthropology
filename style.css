@@ -230,14 +230,14 @@ h1 {
 }
 
 #eco2 {
-  transform: translate(100%, 40%); 
+  transform: translate(100%, 40%);
 }
 
-video{
+video {
   z-index: 102;
   position: fixed;
   right: 0;
   bottom: 0;
-  min-width: 100%;
+  width: 100%;
   min-height: 100%;
 }
