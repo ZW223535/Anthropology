@@ -41,6 +41,6 @@ if (contatore==3) {
   document.getElementById("scritta3").style.display = "block";
 }
 
-if (contatore==4) {
+if (contatore==1) {
   document.getElementById("schermata2").style.display ="none";
 }}
