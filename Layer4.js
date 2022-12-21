@@ -28,7 +28,13 @@ function setup() {
   background("#F2F2F2");
 
   imageMode(CENTER);
-  image(image1, width / 2, 290, image1.width / 1.5, image1.height / 1.5);
+
+  push();
+  imageMode(CENTER);
+  tint(255, 150);
+  image(image1, width / 2, 250, image1.width, image1.height);
+
+  pop();
 
   myText1 = createElement(
     "h1",
@@ -162,7 +168,10 @@ function goShattered() {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
   background("#F2F2F2");
-  image(image1, width / 2, 290, image1.width / 1.5, image1.height / 1.5);
+  push();
+  tint(255, 150);
+  image(image1, width / 2, 250, image1.width, image1.height);
+  pop();
   image2.position(0, 1400);
   image2.size(width, height);
   image3.position(0, 2900);

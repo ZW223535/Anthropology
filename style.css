@@ -145,10 +145,10 @@ body {
   text-align: center;
   font-size: 15px;
   font-family: "FONT NAME";
-  padding-top: 24.5px;
-  padding-bottom: 24.5px;
-  padding-left: 14.5px;
-  padding-right: 14.5px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  padding-left: 17px;
+  padding-right: 17px;
   border-radius: 100%;
   border-radius: 100%;
   border-color: transparent;
@@ -235,7 +235,6 @@ h1 {
 }
 
 video {
-  z-index: 102;
   position: fixed;
   right: 0;
   bottom: 0;
