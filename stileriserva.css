@@ -83,13 +83,8 @@ canvas {
   top: 50%;
   transform: translate(-50%, -50%);
   font-size: 180px;
-<<<<<<< HEAD
-  font-family: 'FONT NAME';
-  font-weight: light;
-=======
   font-family: "FONT NAME";
-  font-weight: 200;
->>>>>>> 0e17cb1bf770c47816d9ead544da8a4076a5c551
+  font-weight: light;
 }
 
 @font-face {
@@ -106,18 +101,12 @@ canvas {
   z-index: 0;
 }
 
-<<<<<<< HEAD
-
-.tronco>img {
-  /*animation-name: giraCazzo; */
-=======
 .tronco > img {
-  animation-name: giraCazzo;
->>>>>>> 0e17cb1bf770c47816d9ead544da8a4076a5c551
+  /*animation-name: giraCazzo; */
   animation-duration: 30s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  scale: 0.90;
+  scale: 0.9;
 }
 
 @keyframes giraCazzo {
@@ -186,13 +175,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -75%);
-<<<<<<< HEAD
 }
 
-h1{
+h1 {
   font-weight: 200;
 }
-=======
-  color: white;
-}
->>>>>>> 0e17cb1bf770c47816d9ead544da8a4076a5c551

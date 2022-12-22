@@ -91,7 +91,9 @@ canvas {
   top: 50%;
   transform: translate(-50%, -50%);
   font-size: 60px;
+  color: #7f7b76;
   font-family: "FONT NAME";
+
   font-weight: light;
 }
 
